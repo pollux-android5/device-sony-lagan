@@ -1,4 +1,4 @@
-char const*const LCD_FILE		= "/sys/devices/i2c-0/0-0036/leds/lm3533-lcd-bl/brightness";
+char const*const LCD_FILE		= "/sys/devices/i2c-0/0-002c/backlight/lcd-backlight/brightness";
 char const*const LCD2_FILE		= "/dev/null";
 char const*const RED_LED_FILE		= "/sys/devices/i2c-0/0-0036/leds/lm3533-red/brightness";
 char const*const GREEN_LED_FILE		= "/sys/devices/i2c-0/0-0036/leds/lm3533-green/brightness";
