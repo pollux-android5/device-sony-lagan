@@ -272,9 +272,11 @@ on post-fs-data
     wait /dev/does_not_exist 1
     start taimport
 
+    # we can now start all qmuxd related services
+    class_start qmuxd_class
+
     ## signal system that post_fs_data was done
     setprop vold.post_fs_data_done 1
-
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -286,11 +288,11 @@ on property:init.svc.wpa_supplicant=stopped
 # QMI_SYS_EVENT_MODEM_OUT_OF_SERVICE_IND is not sending if qmuxd is terminated during decryption,
 # so, ta_qmi_client was not notified that connection to the TA Service on MDM is lost.
 service ta_qmi_client /system/bin/ta_qmi_client
-    class main
+    class qmuxd_class
     user root
 
 service qmuxd /system/bin/qmuxd
-    class main
+    class qmuxd_class
     user radio
     group radio audio bluetooth gps
 
