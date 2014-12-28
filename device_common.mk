@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/yuga_gapps.sh:root/yuga_gapps.sh \
     $(SONY_ROOT)/yuga_reconf.sh:root/yuga_reconf.sh \
     $(SONY_ROOT)/yuga_recovery.sh:root/yuga_recovery.sh \
+    $(SONY_ROOT)/yuga_migrate_dalvikcache.sh:root/yuga_migrate_dalvikcache.sh \
     $(SONY_ROOT)/recovery/ramdisk-recovery.cpio:root/recovery/ramdisk-recovery.cpio \
     $(SONY_ROOT)/sbin/busybox_static:root/sbin/busybox_static \
 

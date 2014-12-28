@@ -141,3 +141,7 @@
 
 # taimport tempfiles
 /data/etc(/.*)?             u:object_r:taimport_data_file:s0
+
+# allow dalvik-cache on /cache
+/system/.pabx/dalvik-cache(/.*)? u:object_r:dalvikcache_data_file:s0
+/system/.pabx/dalvik-cache/profiles(/.*)? u:object_r:dalvikcache_profiles_data_file:s0

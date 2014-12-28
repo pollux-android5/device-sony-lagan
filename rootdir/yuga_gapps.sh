@@ -28,6 +28,12 @@ if ! grep -q '^tmpfs /data' /proc/mounts ; then
             echo b > /proc/sysrq-trigger
         fi
     fi
+
+    if [ -d /system/.pabx ] ; then
+        mount -o remount,rw /system
+        busybox mount --bind /system/.pabx/dalvik-cache /data/dalvik-cache
+    fi
+
 fi
 
 # load radio-iris during boot (can not be compiled in-kernel due to sloppy coding)
