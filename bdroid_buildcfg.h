@@ -19,4 +19,8 @@
 
 #define BTM_DEF_LOCAL_NAME   "Sony AOSP"
 
+// Enables Interleave scan
+#define BTA_HOST_INTERLEAVE_SEARCH  TRUE
+
+
 #endif
